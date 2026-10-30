@@ -1,0 +1,39 @@
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.listen {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 70px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.listen h2 {
+  font-size: clamp(32px, 4vw, 60px);
+}
+.listen p {
+  font-size: 13px;
+  color: #babdb0;
+}
+.listen a {
+  border: 1px solid #74796c;
+  padding: 18px 23px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+@media (max-width: 760px) {
+  .listen {
+    display: block;
+  }
+  .listen a {
+    display: inline-block;
+    margin-top: 15px;
+  }
+}

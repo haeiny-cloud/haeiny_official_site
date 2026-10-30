@@ -1,0 +1,114 @@
+.art {
+  position: relative;
+  aspect-ratio: 0.92;
+  background: #e3dfcf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+  overflow: hidden;
+}
+.art:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 65% 10%, #fff4ca99, transparent 55%),
+    linear-gradient(155deg, #a8ada1, #e9d9ae 55%, #b6764b);
+  z-index: -3;
+}
+.sun {
+  position: absolute;
+  width: 53%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #f8e7b6;
+  left: 23%;
+  top: 15%;
+  box-shadow: 0 0 80px #ffeead88;
+  z-index: -2;
+}
+.horizon {
+  position: absolute;
+  bottom: 0;
+  height: 45%;
+  width: 150%;
+  background: linear-gradient(165deg, #777a63, #373f36);
+  transform: rotate(-9deg) translateY(20%);
+  z-index: -1;
+  border-radius: 50% 50% 0 0;
+}
+.record {
+  width: 72%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: repeating-radial-gradient(circle, #252a25 0 2px, #363a32 3px 4px);
+  box-shadow: 15px 22px 40px #20271c66;
+  display: grid;
+  place-items: center;
+  transform: rotate(-14deg);
+}
+.label {
+  border-radius: 50%;
+  width: 35%;
+  aspect-ratio: 1;
+  background: #bf5939;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff0d3;
+  text-align: center;
+  container-type: inline-size;
+  overflow: hidden;
+}
+.label-title {
+  display: block;
+  font:
+    400 18cqw/1.08 Georgia,
+    serif;
+  letter-spacing: -0.4px;
+  width: 82%;
+  white-space: nowrap;
+  flex: none;
+}
+.label small {
+  display: block;
+  font:
+    700 10cqw/1.2 Arial,
+    sans-serif;
+  letter-spacing: 0.7px;
+  color: #fff8e8;
+  flex: none;
+  margin-top: 6cqw;
+}
+.label:after {
+  content: "";
+  width: 6cqw;
+  height: 6cqw;
+  margin-top: 6cqw;
+  background: var(--ink);
+  border-radius: 50%;
+  flex: none;
+}
+.art-caption {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: space-between;
+  color: #f9f1d8;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+@media (max-width: 760px) {
+  .art {
+    max-height: 560px;
+    width: 100%;
+    aspect-ratio: 1;
+  }
+  .label {
+    font-size: 28px;
+  }
+}
